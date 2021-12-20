@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* _______________________________Header Styling______________________________ */
+.headerbackground {
+  @apply bg-green-800 mx-0 w-full -mt-1;
+}
+
+.header {
+  @apply flex justify-between text-center sm:mx-16 md:mx-32 mt-1 mb-3 text-white p-4;
+}
+
+.headerlist {
+  @apply inline-flex gap-4 md:text-xl sm:text-base;
+}
+
+.headerlogo {
+  @apply md:text-3xl font-bold sm:text-xl text-red-500;
+}
+
+/*__________________________ Footer___________________________ */
+.footer {
+  @apply font-medium p-2 justify-center text-center mb-4 text-2xl mt-80;
+}
+
+/*__________________________AboutPage__________________________*/
+.myabout {
+  @apply text-center mt-3.5;
+}
+.aboutheader {
+  @apply font-bold;
+}
