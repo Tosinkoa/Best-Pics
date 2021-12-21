@@ -29,5 +29,5 @@
   @apply text-center mt-3.5;
 }
 .aboutheader {
-  @apply font-bold;
+  @apply font-bold text-green-700;
 }
