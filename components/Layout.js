@@ -18,3 +18,9 @@ export default function Layout({ description, keys, title, children }) {
     </div>
   );
 }
+
+Layout.defaultProps = {
+  title: 'The best picture',
+  description: 'A website to view the best pictures',
+  keys: 'pictures, pics',
+};

@@ -2,7 +2,7 @@
   "name": "practice-project",
   "private": true,
   "scripts": {
-    "dev": "npm run watch && next dev",
+    "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
