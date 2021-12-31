@@ -4,24 +4,30 @@
 
 /* _______________________________Header Styling______________________________ */
 .headerbackground {
-  @apply bg-green-800 mx-0 w-full -mt-1;
+  @apply mx-0 w-full content-center;
 }
 
 .header {
-  @apply flex justify-between text-center sm:mx-16 md:mx-32 mt-1 mb-3 text-white p-4;
+  @apply flex justify-between text-center mx-5 items-center text-white p-4 pb-0 pt-1;
 }
 
-.headerlist {
-  @apply inline-flex gap-4 md:text-xl sm:text-base;
+.thesearch {
+  @apply inline-flex;
 }
 
 .headerlogo {
-  @apply md:text-3xl font-bold sm:text-xl text-red-500;
+  @apply text-2xl font-bold font-display text-red-600;
+}
+Z .headerpageinput {
+  @apply p-2 bg-inherit w-3/6 border-b-2;
+}
+.headersearch {
+  @apply rounded bg-green-700 p-1 h-8 cursor-default mt-4;
 }
 
 /*__________________________ Footer___________________________ */
 .footer {
-  @apply font-medium p-2 justify-center text-center mb-4 text-2xl mt-80;
+  @apply font-medium p-2 justify-center text-center mb-4 text-2xl mt-40;
 }
 
 /*__________________________AboutPage__________________________*/
@@ -29,5 +35,50 @@
   @apply text-center mt-3.5;
 }
 .aboutheader {
-  @apply font-bold text-green-700;
+  @apply font-bold text-3xl text-green-700 mt-10;
+}
+
+/*__________________________MyImage______________________________*/
+.myimage {
+  @apply grid md:grid-cols-3 lg:grid-cols-4 sm:grid-cols-1 gap-4 m-8 mt-20 rounded;
+}
+
+.oneimage {
+  @apply hover:gap-8 w-fit h-fit max-w-fit max-h-fit;
+}
+/*_________________________Card_________________________________*/
+.card {
+  @apply shadow-lg flex rounded;
+}
+
+/*______________________Menubar_______________________________*/
+
+.headerlist {
+  @apply flex gap-4 text-sm  list-none p-4 font-bold;
+}
+
+.menuicon {
+  @apply rounded p-2 hidden;
+}
+
+.menulist {
+  @apply no-underline justify-center space-x-5 inline-flex;
+}
+
+.headericonlist {
+  @apply absolute inline-block m-1 mt-1;
+}
+
+.oneheaderlist {
+  @apply bg-red-600 hover:bg-red-500 cursor-pointer no-underline pl-2 px-8 py-2 rounded-md justify-center shadow-md;
+}
+
+/*____________________________________ showcase_______________________________*/
+
+.showcase {
+  @apply bg-showcase-dog bg-no-repeat bg-cover bg-center brightness-50 relative h-96 w-full;
+}
+
+.showcasetext {
+  @apply font-sans-serif text-white text-center m-auto absolute filter-none text-3xl p-4;
 }

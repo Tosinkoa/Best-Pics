@@ -4,10 +4,7 @@ import { API_URL } from 'config';
 export default function Home({ data }) {
   return (
     <Layout>
-      Pictures
-      {data.map((mydata) => (
-        <MyImage key={mydata.id} data={mydata} />
-      ))}
+      <MyImage data={data} />
     </Layout>
   );
 }
