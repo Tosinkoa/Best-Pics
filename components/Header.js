@@ -1,6 +1,5 @@
 import Link from 'next/link';
 import Menubar from './Menubar';
-import Showcase from './Showcase';
 
 export default function Header() {
   return (
@@ -13,7 +12,6 @@ export default function Header() {
           <Menubar />
         </div>
       </div>
-      <Showcase />
     </div>
   );
 }

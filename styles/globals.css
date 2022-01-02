@@ -8,7 +8,7 @@
 }
 
 .header {
-  @apply flex justify-between text-center mx-5 items-center text-white p-4 pb-0 pt-1;
+  @apply flex justify-between text-center mx-5 items-center -mt-4 -mb-4 text-white;
 }
 
 .thesearch {
@@ -22,7 +22,7 @@ Z .headerpageinput {
   @apply p-2 bg-inherit w-3/6 border-b-2;
 }
 .headersearch {
-  @apply rounded bg-green-700 p-1 h-8 cursor-default mt-4;
+  @apply rounded bg-green-700 p-1 h-8 top-4 cursor-default;
 }
 
 /*__________________________ Footer___________________________ */
@@ -35,20 +35,20 @@ Z .headerpageinput {
   @apply text-center mt-3.5;
 }
 .aboutheader {
-  @apply font-bold text-3xl text-green-700 mt-10;
+  @apply font-bold text-3xl border-t-4 border-solid  mt-10;
 }
 
 /*__________________________MyImage______________________________*/
 .myimage {
-  @apply grid md:grid-cols-3 lg:grid-cols-4 sm:grid-cols-1 gap-4 m-8 mt-20 rounded;
+  @apply grid md:grid-cols-3 lg:grid-cols-4 sm:grid-cols-1 gap-4 m-8 mt-20 rounded auto-cols-min;
 }
 
-.oneimage {
+/* .oneimage {
   @apply hover:gap-8 w-fit h-fit max-w-fit max-h-fit;
-}
+} */
 /*_________________________Card_________________________________*/
 .card {
-  @apply shadow-lg flex rounded;
+  @apply shadow-lg  flex rounded;
 }
 
 /*______________________Menubar_______________________________*/
@@ -76,9 +76,13 @@ Z .headerpageinput {
 /*____________________________________ showcase_______________________________*/
 
 .showcase {
-  @apply bg-showcase-dog bg-no-repeat bg-cover bg-center brightness-50 relative h-96 w-full;
+  @apply bg-showcase-dog bg-no-repeat bg-cover bg-center flex relative font-sans-serif text-white justify-center flex-col text-3xl p-4 h-96 w-full items-center;
+}
+
+.showcaseoverlay {
+  @apply absolute inset-0 bg-gray-900 bg-opacity-70;
 }
 
 .showcasetext {
-  @apply font-sans-serif text-white text-center m-auto absolute filter-none text-3xl p-4;
+  @apply absolute text-center justify-center;
 }

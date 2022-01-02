@@ -1,18 +1,21 @@
 import Layout from '../components/Layout';
 import MyImage from '../components/MyImages';
-import { API_URL } from 'config';
+
 export default function Home({ data }) {
   return (
     <Layout>
-      <MyImage data={data} />
+      <div>
+        {data.length === 0 && <h1>No picture to show here</h1>}
+        <MyImage data={data} />
+      </div>
     </Layout>
   );
 }
 
 export const getServerSideProps = async () => {
   const key = '24906737-e779d7650b85ce968ac3f7b79';
-  const query = 'muscles';
-  const res = await fetch(`${API_URL}/api/?key=${key}&q=${query}`);
+  const query = 'Cars';
+  const res = await fetch(`https://pixabay.com/api/?key=${key}&q=${query}`);
   const data = await res.json();
 
   return {
