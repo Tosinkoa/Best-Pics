@@ -9,14 +9,14 @@ const MyContext = React.createContext({
 
 export const MyContextProvider = ({ children }) => {
   const [search, setSearch] = useState('');
-  const [showMenu, setShowMenu] = useState(false);
+  const [showMenu, setShowMenu] = useState(true);
 
   const searchHandler = (e) => {
     setSearch(e.target.value);
   };
 
   const menuHandler = () => {
-    setShowMenu(true);
+    setShowMenu(!showMenu);
   };
 
   return (

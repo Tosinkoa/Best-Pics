@@ -4,7 +4,7 @@
 
 /* _______________________________Header Styling______________________________ */
 .headerbackground {
-  @apply mx-0 w-full content-center;
+  @apply mx-0 w-full content-center md:p-3;
 }
 
 .header {
@@ -26,7 +26,7 @@
 .headerlogo {
   @apply text-2xl font-bold font-display text-red-600;
 }
-Z .headerpageinput {
+.headerpageinput {
   @apply p-2 bg-inherit w-3/6 border-b-2;
 }
 
@@ -63,19 +63,19 @@ Z .headerpageinput {
 /*______________________Menubar_______________________________*/
 
 .headerlist {
-  @apply flex  gap-4 justify-between list-none p-4 font-bold;
+  @apply lg:inline-flex gap-4 justify-between list-none p-4 font-bold;
 }
 
 .menuicon {
-  @apply rounded p-2 text-white absolute z-20 bg-red-600 text-3xl lg:hidden;
+  @apply rounded p-2 text-white absolute z-20 bg-red-600 text-2xl lg:hidden -right-4;
 }
 
 .menulist {
-  @apply no-underline justify-center lg:text-sm lg:bg-inherit lg:relative space-x-5 inline-flex lg:flex-row md:flex-col md:absolute md:z-10 md:justify-start md:bg-red-600 md:rounded-md md:rounded-tr-none md:top-0 text-4xl right-0 md:p-4 md:text-left;
+  @apply no-underline justify-between lg:text-sm lg:bg-inherit lg:relative lg:space-x-5 lg:inline-flex lg:flex-row  md:absolute md:z-10 md:justify-start md:bg-red-600 md:rounded-md md:rounded-tr-none md:top-0 md:text-4xl md:right-0 md:p-4 md:text-left;
 }
 
 .headericonlist {
-  @apply lg:absolute lg:inline-block lg:m-1 lg:mt-1 md:hidden;
+  @apply inline-block m-1 mt-1 md:hidden;
 }
 
 .oneheaderlist {
