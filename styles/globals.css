@@ -8,11 +8,19 @@
 }
 
 .header {
-  @apply flex justify-between text-center mx-5 items-center -mt-4 -mb-4 text-white;
+  @apply flex justify-between text-center mx-5 items-center -mt-4 -mb-4 text-white font-semibold;
 }
 
-.thesearch {
-  @apply inline-flex;
+.search {
+  @apply inline-flex space-x-2 text-black border-b-4 border-red-600 ml-4;
+}
+
+.searchlabel {
+  @apply rounded-md mb-2 text-white bg-red-600 p-1 inline-flex;
+}
+
+.searchlogo {
+  @apply mt-1 mr-1;
 }
 
 .headerlogo {
@@ -20,9 +28,6 @@
 }
 Z .headerpageinput {
   @apply p-2 bg-inherit w-3/6 border-b-2;
-}
-.headersearch {
-  @apply rounded bg-green-700 p-1 h-8 top-4 cursor-default;
 }
 
 /*__________________________ Footer___________________________ */
@@ -40,7 +45,11 @@ Z .headerpageinput {
 
 /*__________________________MyImage______________________________*/
 .myimage {
-  @apply grid md:grid-cols-3 lg:grid-cols-4 sm:grid-cols-1 gap-4 m-8 mt-20 rounded auto-cols-min;
+  @apply grid md:grid-cols-3 lg:grid-cols-4  sm:grid-cols-1 gap-4 m-8 mt-20 rounded auto-cols-min;
+}
+
+.pagetitle {
+  @apply font-sans-serif text-center m-10 text-3xl;
 }
 
 /* .oneimage {
@@ -54,23 +63,23 @@ Z .headerpageinput {
 /*______________________Menubar_______________________________*/
 
 .headerlist {
-  @apply flex gap-4 text-sm  list-none p-4 font-bold;
+  @apply flex  gap-4 justify-between list-none p-4 font-bold;
 }
 
 .menuicon {
-  @apply rounded p-2 hidden;
+  @apply rounded p-2 text-white absolute z-20 bg-red-600 text-3xl lg:hidden;
 }
 
 .menulist {
-  @apply no-underline justify-center space-x-5 inline-flex;
+  @apply no-underline justify-center lg:text-sm lg:bg-inherit lg:relative space-x-5 inline-flex lg:flex-row md:flex-col md:absolute md:z-10 md:justify-start md:bg-red-600 md:rounded-md md:rounded-tr-none md:top-0 text-4xl right-0 md:p-4 md:text-left;
 }
 
 .headericonlist {
-  @apply absolute inline-block m-1 mt-1;
+  @apply lg:absolute lg:inline-block lg:m-1 lg:mt-1 md:hidden;
 }
 
 .oneheaderlist {
-  @apply bg-red-600 hover:bg-red-500 cursor-pointer no-underline pl-2 px-8 py-2 rounded-md justify-center shadow-md;
+  @apply lg:bg-red-600 lg:inline-flex hover:bg-red-500 cursor-pointer no-underline pl-2 px-8 py-2 rounded-md lg:justify-center shadow-md md:shadow-none md:justify-start;
 }
 
 /*____________________________________ showcase_______________________________*/

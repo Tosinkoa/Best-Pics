@@ -1,6 +1,7 @@
 import Layout from '../components/Layout';
 
 export default function about() {
+  const router = useRouter();
   return (
     <Layout>
       <div className='myabout'>

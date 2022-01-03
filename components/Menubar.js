@@ -9,30 +9,47 @@ import Link from 'next/link';
 export default function Menubar() {
   return (
     <div>
+      <div>
+        <button className='menuicon'>
+          <FaBars />
+        </button>
+      </div>
       <nav className='headerlist'>
         <ul className='menulist'>
-          <btn className='menuicon'>
-            <FaBars />
-          </btn>
-          <Link href='/'>
-            <a className='oneheaderlist'>
-              Photos
-              <IoMdPhotos className='headericonlist' />
-            </a>
-          </Link>
-          <Link href='/videos'>
-            <a className='oneheaderlist'>
-              Videos <BiMoviePlay className='headericonlist' />
-            </a>
-          </Link>
           <li className='oneheaderlist'>
-            SignIn <FaSignInAlt className='headericonlist' />
+            <Link href='/'>
+              <a>
+                Photos <IoMdPhotos className='headericonlist' />
+              </a>
+            </Link>
           </li>
           <li className='oneheaderlist'>
-            SignUp <SiGnuprivacyguard className='headericonlist' />
+            <Link href='/videos'>
+              <a>
+                Videos <BiMoviePlay className='headericonlist' />
+              </a>
+            </Link>
           </li>
           <li className='oneheaderlist'>
-            Logout <RiLogoutBoxRLine className='headericonlist' />
+            <Link href='/#'>
+              <a>
+                SignIn <FaSignInAlt className='headericonlist' />
+              </a>
+            </Link>
+          </li>
+          <li className='oneheaderlist'>
+            <Link href='/#'>
+              <a>
+                SignUp <SiGnuprivacyguard className='headericonlist' />
+              </a>
+            </Link>
+          </li>
+          <li className='oneheaderlist'>
+            <Link href='/#'>
+              <a>
+                Logout <RiLogoutBoxRLine className='headericonlist' />
+              </a>
+            </Link>
           </li>
         </ul>
       </nav>

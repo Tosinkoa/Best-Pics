@@ -4,8 +4,8 @@ module.exports = {
   theme: {
     screens: {
       sm: '1px',
-      md: '800px',
-      lg: '1440px',
+      md: '550px',
+      lg: '900px',
     },
     fontFamily: {
       'sans-serif': ['Merriweather', 'sans-serif'],
