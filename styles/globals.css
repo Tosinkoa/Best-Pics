@@ -44,12 +44,12 @@
 }
 
 .headermenuicon {
-  @apply bg-red-600 p-2 absolute top-4 right-4 rounded-md flex text-white lg:hidden;
+  @apply bg-red-600 p-2 absolute top-4 right-4 rounded-md flex text-white md:text-2xl lg:hidden;
 }
 
 /*____________________________________MyImage___________________________________*/
 .myimage {
-  @apply grid md:grid-cols-3 lg:grid-cols-4 sm:grid-cols-1 gap-4 m-8 mt-10 rounded auto-cols-min;
+  @apply grid md:grid-cols-3 lg:grid-cols-4 sm:grid-cols-1 gap-4 m-8 mt-10 rounded align-top;
 }
 
 .pagetitle {
@@ -67,7 +67,7 @@
 /*___________________________________________Menubar____________________________________*/
 
 .headerlist {
-  @apply lg:inline-flex gap-4 justify-between p-2 font-bold sm:hidden;
+  @apply lg:inline-flex gap-4 lg:justify-between lg:p-2 font-bold;
 }
 
 .menulist {
@@ -75,11 +75,11 @@
 }
 
 .headericonlist {
-  @apply lg:inline-block m-1 mt-2 text-inherit sm:hidden;
+  @apply lg:inline-block m-1 mt-2 text-inherit sm:hidden hover:bg-red-500 active:bg-red-500 focus:bg-red-500;
 }
 
 .oneheaderlist {
-  @apply lg:bg-red-600 lg:inline-flex hover:bg-red-500 active:bg-red-500 focus:bg-red-500 cursor-pointer no-underline px-2 py-1 rounded-md  shadow-md;
+  @apply lg:bg-red-600 lg:inline-flex hover:bg-red-500 active:bg-red-500 focus:bg-red-500 cursor-pointer no-underline px-2 py-1 rounded-md  shadow-md sm:hidden;
 }
 
 /*____________________________________Dropdown__________________________________________*/
@@ -89,11 +89,15 @@
 }
 
 .ddmenulist {
-  @apply block grid-cols-5 grid-rows-1 pt-5 justify-start absolute z-10 w-full bg-red-600 top-0 text-4xl left-0 p-8 text-left bottom-0;
+  @apply grid-cols-5 grid-rows-1 pt-5 justify-start absolute z-10 w-full bg-red-600 top-0 text-4xl left-0 p-8 text-left bottom-0;
 }
 
 .ddoneheaderlist {
-  @apply flex flex-wrap hover:bg-red-500 cursor-pointer pl-2 px-8 py-2 rounded-md shadow-none justify-start;
+  @apply flex flex-wrap hover:bg-red-500 cursor-pointer active:bg-red-500 focus:bg-red-500 pl-2 px-8 py-2 rounded-md shadow-none justify-start mr-8;
+}
+
+.removemenulist {
+  @apply text-white flex hover:bg-red-500 rounded-md active:bg-red-500 focus:bg-red-500 absolute z-20 text-4xl top-3 right-3 font-semibold lg:hidden p-4;
 }
 
 /*______________________________________ showcase_____________________________________*/

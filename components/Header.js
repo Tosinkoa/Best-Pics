@@ -30,10 +30,11 @@ export default function Header() {
             />
           </div>
         )}
-
-        <button className='headermenuicon'>
-          <FaBars />
-        </button>
+        <div className='headermenuicon'>
+          <button onClick={ctx.menuHandler}>
+            <FaBars />
+          </button>
+        </div>
         <div className='headerlist'>
           <Menubar />
           <Dropdown />

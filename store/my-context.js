@@ -4,7 +4,7 @@ const MyContext = React.createContext({
   searchHandler: () => {},
   menuHandler: () => {},
   search: '',
-  showMenu: false,
+  showMenu: true,
 });
 
 export const MyContextProvider = ({ children }) => {
