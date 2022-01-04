@@ -4,6 +4,7 @@ import MyContext from 'store/my-context';
 import { useContext } from 'react';
 import { FaSearch } from 'react-icons/fa';
 import { useRouter } from 'next/router';
+import Dropdown from './Dropdown';
 
 export default function Header() {
   const router = useRouter();
@@ -29,6 +30,7 @@ export default function Header() {
         )}
         <div className='headerlist'>
           <Menubar />
+          <Dropdown />
         </div>
       </div>
     </div>

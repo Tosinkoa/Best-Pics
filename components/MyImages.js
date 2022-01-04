@@ -5,8 +5,9 @@ export default function MyImages({ data, isLoading }) {
       <h1>{isLoading}</h1>
       <div className='myimage'>
         {data.map((mydata, i) => (
-          <div key={i} className='oneimage'>
+          <div key={i}>
             <img
+              className='rounded-lg'
               src={mydata.webformatURL}
               alt={mydata.tags.split(',').slice(0, 1)}
             />

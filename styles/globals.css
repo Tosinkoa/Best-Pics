@@ -63,23 +63,33 @@
 /*______________________Menubar_______________________________*/
 
 .headerlist {
-  @apply lg:inline-flex gap-4 justify-between list-none p-4 font-bold;
-}
-
-.menuicon {
-  @apply rounded p-2 text-white absolute z-20 bg-red-600 text-2xl lg:hidden -right-4;
+  @apply inline-flex gap-4 justify-between p-2 font-bold;
 }
 
 .menulist {
-  @apply no-underline justify-between lg:text-sm lg:bg-inherit lg:relative lg:space-x-5 lg:inline-flex lg:flex-row  md:absolute md:z-10 md:justify-start md:bg-red-600 md:rounded-md md:rounded-tr-none md:top-0 md:text-4xl md:right-0 md:p-4 md:text-left;
+  @apply justify-center lg:text-lg lg:bg-inherit lg:relative space-x-5 inline-flex lg:flex-row;
 }
 
 .headericonlist {
-  @apply inline-block m-1 mt-1 md:hidden;
+  @apply inline-block m-1 mt-2 text-inherit;
 }
 
 .oneheaderlist {
-  @apply lg:bg-red-600 lg:inline-flex hover:bg-red-500 cursor-pointer no-underline pl-2 px-8 py-2 rounded-md lg:justify-center shadow-md md:shadow-none md:justify-start;
+  @apply lg:bg-red-600 lg:inline-flex hover:bg-red-500 cursor-pointer no-underline px-2 py-2 rounded-md lg:justify-center shadow-md;
+}
+
+/*____________________________________Dropdown__________________________________________*/
+
+.ddheaderlist {
+  @apply gap-4 justify-between p-4 font-bold;
+}
+
+.ddmenulist {
+  @apply justify-start absolute z-10 w-2/5 max-w-fit bg-red-600 rounded-md rounded-tr-none top-5 text-4xl right-0 p-8 text-left lg:hidden;
+}
+
+.ddoneheaderlist {
+  @apply lg:bg-red-600 flex hover:bg-red-500 cursor-pointer pl-2 px-8 py-2 rounded-md shadow-none justify-start;
 }
 
 /*____________________________________ showcase_______________________________*/
