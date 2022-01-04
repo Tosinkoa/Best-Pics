@@ -26,16 +26,20 @@ export default function Menubar() {
               SignIn <FaSignInAlt className='headericonlist' />
             </a>
           </Link>
-          <Link href='/#'>
-            <a className='oneheaderlist'>
-              SignUp <SiGnuprivacyguard className='headericonlist' />
-            </a>
-          </Link>
-          <Link href='/#'>
-            <a className='oneheaderlist'>
-              Logout <RiLogoutBoxRLine className='headericonlist' />
-            </a>
-          </Link>
+          <div className='hidden'>
+            <Link href='/#'>
+              <a className='oneheaderlist'>
+                SignUp <SiGnuprivacyguard className='headericonlist' />
+              </a>
+            </Link>
+          </div>
+          <div className='hidden'>
+            <Link href='/#'>
+              <a className='oneheaderlist'>
+                Logout <RiLogoutBoxRLine className='headericonlist' />
+              </a>
+            </Link>
+          </div>
         </div>
       </div>
     </div>

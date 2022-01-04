@@ -3,6 +3,7 @@ import Menubar from './Menubar';
 import MyContext from 'store/my-context';
 import { useContext } from 'react';
 import { FaSearch } from 'react-icons/fa';
+import { FaBars } from 'react-icons/fa';
 import { useRouter } from 'next/router';
 import Dropdown from './Dropdown';
 
@@ -22,12 +23,17 @@ export default function Header() {
               <FaSearch className='searchlogo' /> Search
             </label>
             <input
+              className='sm:w-3/4'
               type='text'
               onChange={ctx.searchHandler}
               value={ctx.search}
             />
           </div>
         )}
+
+        <button className='headermenuicon'>
+          <FaBars />
+        </button>
         <div className='headerlist'>
           <Menubar />
           <Dropdown />

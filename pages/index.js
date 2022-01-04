@@ -32,8 +32,10 @@ export default function Home() {
   return (
     <Layout>
       <div>
-        {!isLoading && data.length === 0 && <h1>No picture to show here</h1>}
         <MyImage data={data} isLoading={isLoading} />
+        {!isLoading && data.length === 0 && (
+          <h1 className='message'>Picture not found</h1>
+        )}
       </div>
     </Layout>
   );

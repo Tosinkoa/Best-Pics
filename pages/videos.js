@@ -32,8 +32,10 @@ export default function MyVideos() {
       <div>
         <h1 className='pagetitle'>Videos</h1>
         <div className='myimage'>
-          {!isLoading && data.length === 0 && <h1>Nothing to show here</h1>}
-          <h1>{isLoading}</h1>
+          {!isLoading && data.length === 0 && (
+            <h1 className='message'>Video not found</h1>
+          )}
+          <h1 className='message'>{isLoading}</h1>
           {data.map((mymovie, i) => (
             <div className='oneimage' key={i}>
               <iframe

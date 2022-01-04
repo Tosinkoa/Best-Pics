@@ -4,15 +4,15 @@
 
 /* _______________________________Header Styling______________________________ */
 .headerbackground {
-  @apply mx-0 w-full content-center md:p-3;
+  @apply mx-0 w-full content-center lg:p-6 sm:p-8 sm:mx-auto;
 }
 
 .header {
-  @apply flex justify-between text-center mx-5 items-center -mt-4 -mb-4 text-white font-semibold;
+  @apply lg:flex sm:grid-cols-1 sm:justify-between justify-between sm:text-center sm:mx-auto items-center -mt-4 -mb-4 text-white font-semibold;
 }
 
 .search {
-  @apply inline-flex space-x-2 text-black border-b-4 border-red-600 ml-4;
+  @apply inline-flex space-x-2  text-black lg:text-base md:text-base sm:text-sm border-b-4 border-red-600 ml-4 sm:p-2;
 }
 
 .searchlabel {
@@ -24,28 +24,32 @@
 }
 
 .headerlogo {
-  @apply text-2xl font-bold font-display text-red-600;
+  @apply text-2xl font-display tracking-tight leading-loose text-red-600;
 }
 .headerpageinput {
   @apply p-2 bg-inherit w-3/6 border-b-2;
 }
 
-/*__________________________ Footer___________________________ */
+/*__________________________________ Footer__________________________________ */
 .footer {
   @apply font-medium p-2 justify-center text-center mb-4 text-2xl mt-40;
 }
 
-/*__________________________AboutPage__________________________*/
+/*__________________________________AboutPage___________________________________*/
 .myabout {
-  @apply text-center mt-3.5;
+  @apply text-center mt-2;
 }
 .aboutheader {
-  @apply font-bold text-3xl border-t-4 border-solid  mt-10;
+  @apply font-bold text-3xl border-t-4 border-solid mt-10;
 }
 
-/*__________________________MyImage______________________________*/
+.headermenuicon {
+  @apply bg-red-600 p-2 absolute top-4 right-4 rounded-md flex text-white lg:hidden;
+}
+
+/*____________________________________MyImage___________________________________*/
 .myimage {
-  @apply grid md:grid-cols-3 lg:grid-cols-4  sm:grid-cols-1 gap-4 m-8 mt-20 rounded auto-cols-min;
+  @apply grid md:grid-cols-3 lg:grid-cols-4 sm:grid-cols-1 gap-4 m-8 mt-10 rounded auto-cols-min;
 }
 
 .pagetitle {
@@ -55,44 +59,44 @@
 /* .oneimage {
   @apply hover:gap-8 w-fit h-fit max-w-fit max-h-fit;
 } */
-/*_________________________Card_________________________________*/
+/*_______________________________________Card________________________________________*/
 .card {
   @apply shadow-lg  flex rounded;
 }
 
-/*______________________Menubar_______________________________*/
+/*___________________________________________Menubar____________________________________*/
 
 .headerlist {
-  @apply inline-flex gap-4 justify-between p-2 font-bold;
+  @apply lg:inline-flex gap-4 justify-between p-2 font-bold sm:hidden;
 }
 
 .menulist {
-  @apply justify-center lg:text-lg lg:bg-inherit lg:relative space-x-5 inline-flex lg:flex-row;
+  @apply lg:text-lg lg:bg-inherit lg:relative space-x-5 inline-flex lg:flex-row;
 }
 
 .headericonlist {
-  @apply inline-block m-1 mt-2 text-inherit;
+  @apply lg:inline-block m-1 mt-2 text-inherit sm:hidden;
 }
 
 .oneheaderlist {
-  @apply lg:bg-red-600 lg:inline-flex hover:bg-red-500 cursor-pointer no-underline px-2 py-2 rounded-md lg:justify-center shadow-md;
+  @apply lg:bg-red-600 lg:inline-flex hover:bg-red-500 active:bg-red-500 focus:bg-red-500 cursor-pointer no-underline px-2 py-1 rounded-md  shadow-md;
 }
 
 /*____________________________________Dropdown__________________________________________*/
 
 .ddheaderlist {
-  @apply gap-4 justify-between p-4 font-bold;
+  @apply justify-start p-4 font-bold lg:hidden;
 }
 
 .ddmenulist {
-  @apply justify-start absolute z-10 w-2/5 max-w-fit bg-red-600 rounded-md rounded-tr-none top-5 text-4xl right-0 p-8 text-left lg:hidden;
+  @apply block grid-cols-5 grid-rows-1 pt-5 justify-start absolute z-10 w-full bg-red-600 top-0 text-4xl left-0 p-8 text-left bottom-0;
 }
 
 .ddoneheaderlist {
-  @apply lg:bg-red-600 flex hover:bg-red-500 cursor-pointer pl-2 px-8 py-2 rounded-md shadow-none justify-start;
+  @apply flex flex-wrap hover:bg-red-500 cursor-pointer pl-2 px-8 py-2 rounded-md shadow-none justify-start;
 }
 
-/*____________________________________ showcase_______________________________*/
+/*______________________________________ showcase_____________________________________*/
 
 .showcase {
   @apply bg-showcase-dog bg-no-repeat bg-cover bg-center flex relative font-sans-serif text-white justify-center flex-col text-3xl p-4 h-96 w-full items-center;
@@ -104,4 +108,8 @@
 
 .showcasetext {
   @apply absolute text-center justify-center;
+}
+
+.message {
+  @apply font-extrabold text-2xl text-center m-2 text-red-600;
 }

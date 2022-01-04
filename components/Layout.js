@@ -8,7 +8,7 @@ export default function Layout({ description, keys, title, children }) {
   const router = useRouter();
 
   return (
-    <div>
+    <div className='overflow-hidden'>
       <Head>
         <title>{title}</title>
         <meta name='description' content={description} />
