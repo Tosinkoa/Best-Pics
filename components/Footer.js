@@ -6,7 +6,7 @@ export default function Footer() {
       <h1>Best Pics Image Gallery</h1>
       <small>
         <Link href='/about'>
-          <a className='text-green-700'>About Page</a>
+          <a className='text-green-700'>About This Project</a>
         </Link>
       </small>
       <p>

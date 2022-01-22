@@ -1,19 +1,20 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
 const MyContext = React.createContext({
   searchHandler: () => {},
   menuHandler: () => {},
-  search: '',
+  search: "",
   showMenu: true,
+  searchSubmit: () => {},
 });
 
 export const MyContextProvider = ({ children }) => {
-  const [search, setSearch] = useState('');
+  const [search, setSearch] = useState("");
   const [showMenu, setShowMenu] = useState(true);
 
-  const searchHandler = (e) => {
-    setSearch(e.target.value);
-  };
+  const searchHandler = (e) => setSearch(e.target.value);
+
+  const searchSubmit = (e) => e.preventDefault();
 
   const menuHandler = () => {
     setShowMenu(!showMenu);
@@ -26,6 +27,7 @@ export const MyContextProvider = ({ children }) => {
         menuHandler,
         search,
         showMenu,
+        searchSubmit,
       }}
     >
       {children}

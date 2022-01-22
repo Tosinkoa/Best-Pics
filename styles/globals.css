@@ -24,7 +24,7 @@
 }
 
 .headerlogo {
-  @apply text-2xl font-display tracking-tight leading-loose text-red-600;
+  @apply text-2xl animate-bounce font-display tracking-tight leading-loose text-red-600;
 }
 .headerpageinput {
   @apply p-2 bg-inherit w-3/6 border-b-2;
@@ -32,7 +32,7 @@
 
 /*__________________________________ Footer__________________________________ */
 .footer {
-  @apply font-medium p-2 justify-center text-center mb-4 text-2xl mt-40;
+  @apply font-medium p-2 justify-center text-center mb-4 text-2xl mt-40 bottom-0;
 }
 
 /*__________________________________AboutPage___________________________________*/
@@ -49,16 +49,21 @@
 
 /*____________________________________MyImage___________________________________*/
 .myimage {
-  @apply grid md:grid-cols-3 lg:grid-cols-4 sm:grid-cols-1 gap-4 m-8 mt-10 rounded align-top;
+  @apply md:columns-3 lg:columns-4 sm:columns-1 m-8 mt-10 space-y-12 space-x-2;
+}
+
+.eachimage {
+  @apply justify-start grid;
+}
+
+.imagetitle {
+  @apply absolute;
 }
 
 .pagetitle {
-  @apply font-sans-serif text-center m-10 text-3xl;
+  @apply flex font-sans-serif text-center m-10 text-3xl justify-center;
 }
 
-/* .oneimage {
-  @apply hover:gap-8 w-fit h-fit max-w-fit max-h-fit;
-} */
 /*_______________________________________Card________________________________________*/
 .card {
   @apply shadow-lg  flex rounded;
@@ -89,15 +94,15 @@
 }
 
 .ddmenulist {
-  @apply grid-cols-5 grid-rows-1 pt-5 justify-start absolute z-10 w-full bg-red-600 top-0 text-4xl left-0 p-8 text-left bottom-0;
+  @apply grid-cols-5 grid-rows-1 pt-5 justify-start absolute z-20 w-full bg-red-600 top-0 text-4xl left-0 p-8 text-left bottom-0;
 }
 
 .ddoneheaderlist {
-  @apply flex flex-wrap hover:bg-red-500 cursor-pointer active:bg-red-500 focus:bg-red-500 pl-2 px-8 py-2 rounded-md shadow-none justify-start mr-8;
+  @apply flex flex-wrap hover:bg-red-500 cursor-pointer active:bg-red-500 focus:bg-red-500 pl-2 px-8 py-2 rounded-md shadow-none justify-start mr-14 sm:text-2xl md:text-3xl;
 }
 
 .removemenulist {
-  @apply text-white flex hover:bg-red-500 rounded-md active:bg-red-500 focus:bg-red-500 absolute z-20 text-4xl top-3 right-3 font-semibold lg:hidden p-4;
+  @apply text-white flex hover:bg-red-500 rounded-md active:bg-red-500 focus:bg-red-500 absolute z-30 text-4xl top-3 right-3 font-semibold lg:hidden p-3;
 }
 
 /*______________________________________ showcase_____________________________________*/
