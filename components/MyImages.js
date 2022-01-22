@@ -1,4 +1,5 @@
 import { FaHeart } from "react-icons/fa";
+import Link from "next/link";
 
 export default function MyImages({ data, isLoading }) {
   return (
@@ -16,9 +17,12 @@ export default function MyImages({ data, isLoading }) {
               alt={mydata.tags.split(",").slice(0, 1)}
             />
             <span>
-              <p className="imagetitle">
-                {mydata.tags.toUpperCase().split(",").slice(0, 1)}
-              </p>
+              <div className="imagetitle">
+                <p>{mydata.tags.toUpperCase().split(",").slice(0, 1)}</p>
+                <Link href="/[id]" as={`${mydata.id}`}>
+                  <button>View</button>
+                </Link>
+              </div>
             </span>
           </div>
         ))}
