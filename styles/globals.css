@@ -49,15 +49,15 @@
 
 /*____________________________________MyImage___________________________________*/
 .myimage {
-  @apply md:columns-3 lg:columns-4 sm:columns-1 m-8 mt-10 space-y-12 space-x-2;
+  @apply md:columns-3 lg:columns-4 sm:columns-1 m-8 mt-10 space-y-12 space-x-2 relative;
 }
 
 .eachimage {
-  @apply justify-start grid;
+  @apply relative justify-center;
 }
 
 .imagetitle {
-  @apply absolute;
+  @apply text-xl absolute;
 }
 
 .pagetitle {

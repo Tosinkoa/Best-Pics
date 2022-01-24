@@ -13,10 +13,10 @@ export default function Home() {
   const { search } = ctx;
   useEffect(() => {
     const fetchData = async () => {
-      const key = "24906737-e779d7650b85ce968ac3f7b79";
+      const API_KEY = process.env.API_KEY;
       setIsLoading("Loading...");
       const res = await fetch(
-        `https://pixabay.com/api/?key=${key}&q=${search}`
+        `https://pixabay.com/api/?key=${API_KEY}&q=${search}`
       );
       if (!res.ok) return setIsLoading("Failed to load data");
 

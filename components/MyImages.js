@@ -1,5 +1,6 @@
 import { FaHeart } from "react-icons/fa";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function MyImages({ data, isLoading }) {
   return (
@@ -10,21 +11,20 @@ export default function MyImages({ data, isLoading }) {
       <h1 className="message">{isLoading}</h1>
       <div className="myimage">
         {data.map((mydata, i) => (
-          <div key={i} className="eachimage">
-            <img
-              className="rounded-lg"
-              src={mydata.webformatURL}
-              alt={mydata.tags.split(",").slice(0, 1)}
-            />
-            <span>
-              <div className="imagetitle">
-                <p>{mydata.tags.toUpperCase().split(",").slice(0, 1)}</p>
-                <Link href="/[id]" as={`${mydata.id}`}>
-                  <button>View</button>
-                </Link>
-              </div>
-            </span>
-          </div>
+          <Link href="/[id]" as={`${mydata.id}`} key={i}>
+            <div className="eachimage">
+              <Image
+                className="rounded-md"
+                src={mydata.webformatURL}
+                alt={mydata.tags.split(",").slice(0, 1)}
+                width={mydata.webformatWidth}
+                height={mydata.webformatHeight}
+              />
+              <p className="imagetitle">
+                {mydata.tags.split(",").splice(0, 1)}
+              </p>
+            </div>
+          </Link>
         ))}
       </div>
     </div>

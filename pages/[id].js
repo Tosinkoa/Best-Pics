@@ -1,22 +1,35 @@
-const View = (picID) => {
+import Image from "next/image";
+import Layout from "components/Layout";
+
+const View = ({ pic }) => {
   return (
-    <div>
-      <p>{picID.id}</p>
-      <h1>View</h1>
-    </div>
+    <Layout>
+      <div>
+        <Image
+          src={pic.largeImageURL}
+          alt={pic.tags.split(",").slice(0, 1)}
+          width={pic.imageWidth}
+          height={pic.imageHeight}
+        />
+      </div>
+      <div>
+        <a href={pic.largeImageURL} download={pic.tags.split(",").slice(0, 1)}>
+          Download
+        </a>
+      </div>
+    </Layout>
   );
 };
-
 export default View;
 
-export const getServerSideProps = async (params) => {
-  const key = process.env.My_KEY;
+export const getServerSideProps = async ({ params }) => {
   const res = await fetch(
-    `https://pixabay.com/api/?key=${key}&id=${params.id}}`
+    `https://pixabay.com/api/?key=${process.env.API_KEY}&id=${params.id}`
   );
-  const { picID } = await res.json();
-  console.log(hits);
+
+  const { hits } = await res.json();
+
   return {
-    props: { picID },
+    props: { pic: hits[0] },
   };
 };
