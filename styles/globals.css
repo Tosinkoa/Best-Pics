@@ -148,7 +148,7 @@
 }
 
 .formbackground {
-  @apply border-white mx-auto border-2 lg:w-2/5 md:w-8/12 sm:w-4/5 -mt-4 bg-white p-7 mb-10 rounded-lg shadow-xl relative;
+  @apply border-white mx-auto border-2 lg:w-2/5 md:w-8/12 sm:w-11/12 -mt-4 bg-white p-7 mb-10 rounded-lg shadow-xl relative;
 }
 
 .formbg {
@@ -206,7 +206,7 @@
 /*______________________________Modal______________________*/
 
 .modaloverlay {
-  @apply absolute top-0 bottom-0 items-center flex bg-gray-900 bg-opacity-70 w-full -mb-96 h-full h-screen;
+  @apply absolute top-0 bottom-0 items-center flex bg-gray-900 bg-opacity-70 w-full -mb-96 h-full;
 }
 
 .modal {
@@ -218,5 +218,5 @@
 }
 
 .modalicon {
-  @apply flex absolute text-2xl top-8 text-gray-800 right-8 text-white;
+  @apply flex absolute text-2xl top-8 right-8 text-white;
 }
