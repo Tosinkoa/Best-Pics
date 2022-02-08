@@ -4,6 +4,7 @@ import MyContext from "store/my-context";
 import { useContext } from "react";
 import { useState, useEffect } from "react";
 import Authorization from "HOC/Authorization";
+import Image from "next/image";
 
 function Home() {
   const [data, setdata] = useState([]);
@@ -16,7 +17,15 @@ function Home() {
   useEffect(() => {
     const fetchData = async () => {
       const API_KEY = process.env.API_KEY;
-      setIsLoading(<img className="loading" src="/images/loading.gif" />);
+      setIsLoading(
+        <Image
+          className="loading"
+          src="/images/loading.gif"
+          alt="loading"
+          width={400}
+          height={160}
+        />
+      );
       const res = await fetch(
         `https://pixabay.com/api/?key=${API_KEY}&q=${search}`
       );

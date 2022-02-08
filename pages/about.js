@@ -23,6 +23,7 @@ export default function about() {
               className="sm:flex"
               width={200}
               height={400}
+              alt="about-page"
             />
 
             <p className="text-center lg:w-4/5 sm-full">

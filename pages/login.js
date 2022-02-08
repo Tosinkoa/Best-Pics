@@ -78,13 +78,13 @@ export default function Login() {
                 Close
               </button>
             </Modal>
-            <Link href="/">
+            <Link href="/" passHref>
               <button className="formicon">
                 <FcGoogle />
                 <p className="continuesignin">Continue with Google</p>
               </button>
             </Link>
-            <Link href="/">
+            <Link href="/" passHref>
               <button className="formicon mb-4">
                 <BsTwitter className="text-blue-700" />
                 <p className="continuesignin">Continue with Twitter</p>
@@ -133,7 +133,7 @@ export default function Login() {
                 </button>
               </div>
             </div>
-            <Link href="/">
+            <Link href="/" passHref>
               <button className="formbutton" onClick={signHandler}>
                 Login your account
               </button>

@@ -15,7 +15,7 @@ export default function MyImages({ data, isLoading }) {
             <a
               className="text-bold text-red-600 text-center m-0"
               href="https://www.pixabay.com/"
-              target="_blank"
+              rel="noreferrer"
             >
               pixabay
             </a>
@@ -26,7 +26,7 @@ export default function MyImages({ data, isLoading }) {
       <h1 className="message">{isLoading}</h1>
       <div className="myimage">
         {data.map((mydata, i) => (
-          <Link href="/[id]" as={`${mydata.id}`} key={i}>
+          <Link href="/[id]" as={`${mydata.id}`} key={i} passHref>
             <div className="eachimage">
               <Image
                 className="rounded-md "

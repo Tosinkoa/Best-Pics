@@ -1,6 +1,6 @@
 {
-  "name": "Best-Pics",
-  "version": 1.0.0,
+  "name": "best-pics",
+  "version": "1.0.0",
   "description": "Best pics app for viewing and downloading Images",
   "main": "./pages/index.js",
   "author": "Ojo Paul",

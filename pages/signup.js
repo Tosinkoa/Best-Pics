@@ -113,13 +113,13 @@ export default function Signup() {
                 Close
               </button>
             </Modal>
-            <Link href="/">
+            <Link href="/" passHref>
               <button className="formicon">
                 <FcGoogle />
                 <p className="continuesignin">Continue with Google</p>
               </button>
             </Link>
-            <Link href="/">
+            <Link href="/" passHref>
               <button className="formicon mb-4">
                 <BsTwitter className="text-blue-700" />
                 <p className="continuesignin">Continue with Twitter</p>
@@ -203,7 +203,7 @@ export default function Signup() {
                 </button>
               </div>
             </div>
-            <Link href="/">
+            <Link href="/" passHref>
               <button onClick={signHandler} className="formbutton">
                 Create my account
               </button>
