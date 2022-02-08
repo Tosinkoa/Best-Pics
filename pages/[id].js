@@ -43,7 +43,7 @@ export const getServerSideProps = async ({ params }) => {
   const { id } = params;
 
   const res = await fetch(
-    `https://pixabay.com/api/?key=${process.env.API_KEY}&id=${id}`
+    `https://pixabay.com/api/?key=${process.env.NEXT_PUBLIC.API_KEY}&id=${id}`
   );
 
   if (!res.ok) {

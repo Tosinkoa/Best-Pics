@@ -139,20 +139,28 @@
 
 /*_____________________Login & Signin___________________________________*/
 
+.forminput {
+  @apply bg-gray-200 border rounded text-xs font-medium leading-none text-gray-800 py-3 w-full pl-3 mt-2 focus-within:bg-blue-100 focus-within:border-blue-500;
+}
+
+.formerror {
+  @apply text-red-500 text-sm;
+}
+
+.formlabel {
+  @apply text-sm font-medium leading-none text-gray-800;
+}
+
+.orform {
+  @apply text-base font-medium leading-4 px-2.5 text-gray-800 mt-4 m-4 text-center;
+}
+
+.signinlogo {
+  @apply lg:text-3xl md:text-2xl sm:text-xl animate-bounce font-display font-extrabold  tracking-tight leading-loose text-center text-gray-200;
+}
+
 .signinheader {
-  @apply focus:outline-none text-2xl font-extrabold leading-6 text-gray-800;
-}
-
-.themainbackground {
-  @apply bg-gradient-to-br relative from-red-700 to-red-400 w-screen overflow-hidden bg-cover bg-center top-0 bottom-0 drop-shadow-2xl;
-}
-
-.formbackground {
-  @apply border-white mx-auto border-2 lg:w-2/5 md:w-8/12 sm:w-11/12 -mt-4 bg-white p-7 mb-10 rounded-lg shadow-xl relative;
-}
-
-.formbg {
-  @apply m-10 mb-20;
+  @apply focus:outline-none text-2xl font-extrabold md:text-xl sm:text-base leading-6 text-gray-800;
 }
 
 .formicon {
@@ -161,18 +169,6 @@
 
 .continuesignin {
   @apply text-base font-medium ml-4 text-gray-800;
-}
-
-.orform {
-  @apply text-base font-medium leading-4 px-2.5 text-gray-800 mt-4 m-4 text-center;
-}
-
-.formlabel {
-  @apply text-sm font-medium leading-none text-gray-800;
-}
-
-.forminput {
-  @apply bg-gray-200 border rounded text-xs font-medium leading-none text-gray-800 py-3 w-full pl-3 mt-2 focus-within:bg-blue-100 focus-within:border-blue-500;
 }
 
 .formbutton {
@@ -187,26 +183,10 @@
   @apply focus:outline-none text-sm mt-4 font-medium leading-none text-gray-800;
 }
 
-.signinlogo {
-  @apply text-5xl animate-bounce font-display font-extrabold mb-2 tracking-tight leading-loose text-center text-gray-200;
-}
-
-.thesigninheader {
-  @apply inline-flex justify-between space-x-10;
-}
-
-.skipbutton {
-  @apply px-4 py-1 items-center bg-red-600 rounded-lg inline-flex text-gray-200 drop-shadow-lg;
-}
-
-.formerror {
-  @apply text-red-500 text-sm;
-}
-
 /*______________________________Modal______________________*/
 
 .modaloverlay {
-  @apply absolute top-0 bottom-0 items-center flex bg-gray-900 bg-opacity-70 w-full -mb-96 h-full;
+  @apply absolute top-0 bottom-0 items-center flex bg-gray-900 bg-opacity-70 w-full h-full;
 }
 
 .modal {
