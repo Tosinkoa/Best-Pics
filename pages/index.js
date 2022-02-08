@@ -3,18 +3,20 @@ import MyImage from "../components/MyImages";
 import MyContext from "store/my-context";
 import { useContext } from "react";
 import { useState, useEffect } from "react";
+import Authorization from "HOC/Authorization";
 
-export default function Home() {
+function Home() {
   const [data, setdata] = useState([]);
   const [isLoading, setIsLoading] = useState("");
 
   const ctx = useContext(MyContext);
 
   const { search } = ctx;
+
   useEffect(() => {
     const fetchData = async () => {
       const API_KEY = process.env.API_KEY;
-      setIsLoading("Loading...");
+      setIsLoading(<img className="loading" src="/images/loading.gif" />);
       const res = await fetch(
         `https://pixabay.com/api/?key=${API_KEY}&q=${search}`
       );
@@ -42,3 +44,5 @@ export default function Home() {
     </Layout>
   );
 }
+
+export default Authorization(Home);

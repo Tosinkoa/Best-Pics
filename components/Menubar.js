@@ -1,12 +1,16 @@
-import { FaBars } from "react-icons/fa";
 import { FaSignInAlt } from "react-icons/fa";
 import { SiGnuprivacyguard } from "react-icons/si";
 import { IoMdPhotos } from "react-icons/io";
-import { BiMoviePlay } from "react-icons/bi";
 import { RiLogoutBoxRLine } from "react-icons/ri";
 import Link from "next/link";
+import { useContext } from "react";
+import MyContext from "store/my-context";
+import { FcAbout } from "react-icons/fc";
 
 export default function Menubar() {
+  const { showLogout, showSignup, showSignin, logoutHandler } =
+    useContext(MyContext);
+
   return (
     <div>
       <div className="headerlist">
@@ -16,23 +20,34 @@ export default function Menubar() {
               Photos <IoMdPhotos className="headericonlist" />
             </a>
           </Link>
-          <Link href="/#">
-            <a className="oneheaderlist">
-              SignIn <FaSignInAlt className="headericonlist" />
-            </a>
-          </Link>
-          <Link href="/#">
-            <a className="oneheaderlist">
-              SignUp <SiGnuprivacyguard className="headericonlist" />
-            </a>
-          </Link>
-          <div className="hidden">
-            <Link href="/#">
+          {showSignin && (
+            <Link href="/login">
               <a className="oneheaderlist">
+                SignIn <FaSignInAlt className="headericonlist" />
+              </a>
+            </Link>
+          )}
+
+          {showSignup && (
+            <Link href="/signup">
+              <a className="oneheaderlist">
+                SignUp <SiGnuprivacyguard className="headericonlist" />
+              </a>
+            </Link>
+          )}
+
+          {showLogout && (
+            <Link href="/">
+              <a className="oneheaderlist" onClick={logoutHandler}>
                 Logout <RiLogoutBoxRLine className="headericonlist" />
               </a>
             </Link>
-          </div>
+          )}
+          <Link href="/about">
+            <a>
+              <FcAbout className="abouticon" />
+            </a>
+          </Link>
         </div>
       </div>
     </div>

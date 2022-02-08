@@ -9,7 +9,8 @@ import Dropdown from "./Dropdown";
 
 export default function Header() {
   const router = useRouter();
-  const ctx = useContext(MyContext);
+  const { menuHandler, search, searchHandler, searchSubmit } =
+    useContext(MyContext);
 
   return (
     <div className="headerbackground">
@@ -17,21 +18,22 @@ export default function Header() {
         <h1 className="headerlogo">
           <Link href="/">BESTPICS</Link>{" "}
         </h1>
-        {router.pathname !== "/about" && (
-          <form onSubmit={ctx.searchSubmit} className="search">
+        {router.pathname === "/" && (
+          <form onSubmit={searchSubmit} className="search">
             <label className="searchlabel">
               <FaSearch className="searchlogo" /> Search
             </label>
             <input
-              className="sm:w-3/4"
-              type="text"
-              onChange={ctx.searchHandler}
-              value={ctx.search}
+              className="sm:w-3/4 focus:outline-none "
+              type="search"
+              onChange={searchHandler}
+              value={search}
+              placeholder="Search for anything..."
             />
           </form>
         )}
         <div className="headermenuicon">
-          <button onClick={ctx.menuHandler}>
+          <button onClick={menuHandler}>
             <FaBars />
           </button>
         </div>

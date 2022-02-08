@@ -8,15 +8,15 @@
 }
 
 .header {
-  @apply lg:flex sm:grid-cols-1 sm:justify-between justify-between sm:text-center sm:mx-auto items-center -mt-4 -mb-4 text-white font-semibold;
+  @apply lg:flex sm:grid-cols-1 sm:justify-between justify-between sm:text-center sm:mx-auto items-center -mt-4 -mb-4 text-gray-200 font-semibold;
 }
 
 .search {
-  @apply inline-flex space-x-2  text-black lg:text-base md:text-base sm:text-sm border-b-4 border-red-600 ml-4 sm:p-2;
+  @apply inline-flex space-x-2  text-gray-800 lg:text-base md:text-base sm:text-sm border-b-4 border-red-600 ml-4 sm:p-2;
 }
 
 .searchlabel {
-  @apply rounded-md mb-2 text-white bg-red-600 p-1 inline-flex;
+  @apply rounded-md mb-2 text-gray-200 bg-red-600 p-1 inline-flex;
 }
 
 .searchlogo {
@@ -32,24 +32,29 @@
 
 /*__________________________________ Footer__________________________________ */
 .footer {
-  @apply font-medium p-2 justify-center text-center mb-4 text-2xl mt-40 bottom-0;
+  @apply font-medium p-2 justify-center text-center mb-4 text-2xl mt-20;
 }
 
 /*__________________________________AboutPage___________________________________*/
 .myabout {
-  @apply text-center mt-2;
+  @apply text-center sm:-mt-20 lg:-mt-10 mb-80;
 }
+
+.aboutborder {
+  @apply border-t-4 border-solid mt-10;
+}
+
 .aboutheader {
-  @apply font-bold text-3xl border-t-4 border-solid mt-10;
+  @apply font-bold text-3xl mt-5;
 }
 
 .headermenuicon {
-  @apply bg-red-600 p-2 absolute top-4 right-4 rounded-md flex text-white md:text-2xl lg:hidden;
+  @apply bg-red-600 p-2 absolute top-4 right-4 rounded-md flex text-gray-200 md:text-2xl lg:hidden shadow-2xl;
 }
 
 /*____________________________________MyImage___________________________________*/
 .myimage {
-  @apply md:columns-3 lg:columns-4 sm:columns-1 m-8 mt-10 space-y-12 space-x-2 relative;
+  @apply md:columns-3 lg:columns-4 sm:columns-1 m-8 mt-10 space-y-16 space-x-2 relative;
 }
 
 .eachimage {
@@ -57,11 +62,11 @@
 }
 
 .imagetitle {
-  @apply text-xl absolute;
+  @apply text-xl absolute capitalize font-bold;
 }
 
 .pagetitle {
-  @apply flex font-sans-serif text-center m-10 text-3xl justify-center;
+  @apply flex font-sans-serif text-center m-10 mb-2 text-3xl justify-center;
 }
 
 /*_______________________________________Card________________________________________*/
@@ -87,28 +92,32 @@
   @apply lg:bg-red-600 lg:inline-flex hover:bg-red-500 active:bg-red-500 focus:bg-red-500 cursor-pointer no-underline px-2 py-1 rounded-md  shadow-md sm:hidden;
 }
 
+.abouticon {
+  @apply text-4xl sm:hidden lg:inline-flex self-center;
+}
+
 /*____________________________________Dropdown__________________________________________*/
 
 .ddheaderlist {
-  @apply justify-start p-4 font-bold lg:hidden;
+  @apply justify-start p-2 font-bold lg:hidden bg-cover relative rounded-md bg-red-600;
 }
 
 .ddmenulist {
-  @apply grid-cols-5 grid-rows-1 pt-5 justify-start absolute z-20 w-full bg-red-600 top-0 text-4xl left-0 p-8 text-left bottom-0;
+  @apply grid-cols-5 grid-rows-1 pt-5 justify-start z-10  w-full bg-red-600 text-4xl left-0 p-8 text-left;
+}
+
+.ddicon {
+  @apply mt-1 mr-2;
 }
 
 .ddoneheaderlist {
-  @apply flex flex-wrap hover:bg-red-500 cursor-pointer active:bg-red-500 focus:bg-red-500 pl-2 px-8 py-2 rounded-md shadow-none justify-start mr-14 sm:text-2xl md:text-3xl;
-}
-
-.removemenulist {
-  @apply text-white flex hover:bg-red-500 rounded-md active:bg-red-500 focus:bg-red-500 absolute z-30 text-4xl top-3 right-3 font-semibold lg:hidden p-3;
+  @apply flex flex-wrap hover:bg-red-500 cursor-pointer active:bg-red-500 focus:bg-red-500 pl-2 px-5 py-2 rounded-md shadow-none justify-start sm:text-2xl md:text-3xl;
 }
 
 /*______________________________________ showcase_____________________________________*/
 
 .showcase {
-  @apply bg-showcase-dog bg-no-repeat bg-cover bg-center flex relative font-sans-serif text-white justify-center flex-col text-3xl p-4 h-96 w-full items-center;
+  @apply bg-showcase-dog bg-no-repeat bg-cover bg-center flex relative font-sans-serif text-gray-200 justify-center flex-col text-3xl p-4 h-96 w-full items-center;
 }
 
 .showcaseoverlay {
@@ -121,4 +130,93 @@
 
 .message {
   @apply font-extrabold text-2xl text-center m-2 text-red-600;
+}
+
+/*________________________Loading Gif_______________________*/
+.loading {
+  @apply justify-center w-72 h-28 mx-auto;
+}
+
+/*_____________________Login & Signin___________________________________*/
+
+.signinheader {
+  @apply focus:outline-none text-2xl font-extrabold leading-6 text-gray-800;
+}
+
+.themainbackground {
+  @apply bg-gradient-to-br relative from-red-700 to-red-400 w-screen overflow-hidden bg-cover bg-center top-0 bottom-0 drop-shadow-2xl;
+}
+
+.formbackground {
+  @apply border-white mx-auto border-2 lg:w-2/5 md:w-8/12 sm:w-4/5 -mt-4 bg-white p-7 mb-10 rounded-lg shadow-xl relative;
+}
+
+.formbg {
+  @apply m-10 mb-20;
+}
+
+.formicon {
+  @apply focus:outline-none focus:ring-2 focus:ring-offset-1 focus:ring-gray-700 p-3 border rounded-lg border-white flex items-center w-full mt-4 bg-gray-100 hover:bg-gray-200;
+}
+
+.continuesignin {
+  @apply text-base font-medium ml-4 text-gray-800;
+}
+
+.orform {
+  @apply text-base font-medium leading-4 px-2.5 text-gray-800 mt-4 m-4 text-center;
+}
+
+.formlabel {
+  @apply text-sm font-medium leading-none text-gray-800;
+}
+
+.forminput {
+  @apply bg-gray-200 border rounded text-xs font-medium leading-none text-gray-800 py-3 w-full pl-3 mt-2 focus-within:bg-blue-100 focus-within:border-blue-500;
+}
+
+.formbutton {
+  @apply focus:ring-2 focus:ring-offset-2 focus:ring-red-500 text-sm font-semibold leading-none text-gray-200 focus:outline-none bg-red-600 border rounded hover:bg-red-500 py-4 w-full mt-5 drop-shadow-lg disabled:bg-gray-400;
+}
+
+.belowbutton {
+  @apply focus:text-gray-200 focus:outline-none focus:underline hover:underline text-sm font-medium leading-none text-red-600 cursor-pointer;
+}
+
+.belowbutpara {
+  @apply focus:outline-none text-sm mt-4 font-medium leading-none text-gray-800;
+}
+
+.signinlogo {
+  @apply text-5xl animate-bounce font-display font-extrabold mb-2 tracking-tight leading-loose text-center text-gray-200;
+}
+
+.thesigninheader {
+  @apply inline-flex justify-between space-x-10;
+}
+
+.skipbutton {
+  @apply px-4 py-1 items-center bg-red-600 rounded-lg inline-flex text-gray-200 drop-shadow-lg;
+}
+
+.formerror {
+  @apply text-red-500 text-sm;
+}
+
+/*______________________________Modal______________________*/
+
+.modaloverlay {
+  @apply absolute top-0 bottom-0 items-center flex bg-gray-900 bg-opacity-70 w-full -mb-96 h-full h-screen;
+}
+
+.modal {
+  @apply h-3/4 sm:w-3/4 p-6 text-center md:w-2/4 mx-auto flex bg-white border-gray-800 rounded-md;
+}
+
+.modalchildren {
+  @apply mx-auto mt-2;
+}
+
+.modalicon {
+  @apply flex absolute text-2xl top-8 text-gray-800 right-8 text-white;
 }
