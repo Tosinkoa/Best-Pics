@@ -16,7 +16,7 @@ function Home() {
 
   useEffect(() => {
     const fetchData = async () => {
-      const API_KEY = process.env.NEXT_PUBLIC.API_KEY;
+      const API_KEY = process.env.API_KEY;
       setIsLoading(
         <Image
           className="loading"
