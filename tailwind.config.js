@@ -16,6 +16,15 @@ module.exports = {
         "showcase-dog": "url('/images/showcase-dog.jpg')",
         "form-showcase": "url('/images/formbg.jpg')",
       },
+      animation: {
+        wiggle: "wiggle 6s ease-in-out infinite",
+      },
+    },
+    keyframes: {
+      wiggle: {
+        "0%, 100%": { transform: "scale(1.2) " },
+        "50%": { transform: " scale(1)" },
+      },
     },
   },
   plugins: [],

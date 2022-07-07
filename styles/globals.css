@@ -4,27 +4,15 @@
 
 /* _______________________________Header Styling______________________________ */
 .headerbackground {
-  @apply mx-0 w-full content-center lg:p-6 sm:p-8 sm:mx-auto;
+  @apply  w-full content-center lg:p-6 sm:p-8 sm:mx-auto;
 }
 
 .header {
-  @apply lg:flex sm:grid-cols-1 sm:justify-between justify-between sm:text-center sm:mx-auto items-center -mt-4 -mb-4 text-gray-200 font-semibold;
-}
-
-.search {
-  @apply inline-flex space-x-2  text-gray-800 lg:text-base md:text-base sm:text-sm border-b-4 border-red-600 ml-4 sm:p-2;
-}
-
-.searchlabel {
-  @apply rounded-md mb-2 text-gray-200 bg-red-600 p-1 inline-flex;
-}
-
-.searchlogo {
-  @apply mt-1 mr-1;
+  @apply lg:flex sm:grid-cols-1 sm:justify-between justify-between sm:text-center sm:mx-auto items-center -mt-4 -mb-4 text-gray-200 font-semibold md:px-6 lg:px-10 sm:px-2;
 }
 
 .headerlogo {
-  @apply text-2xl animate-bounce font-display tracking-tight leading-loose text-red-600;
+  @apply text-2xl animate-wiggle font-display tracking-tight leading-loose text-red-600;
 }
 .headerpageinput {
   @apply p-2 bg-inherit w-3/6 border-b-2;
@@ -55,6 +43,18 @@
 /*____________________________________MyImage___________________________________*/
 .myimage {
   @apply md:columns-3 lg:columns-4 sm:columns-1 m-8 mt-10 space-y-16 space-x-2 relative;
+}
+
+.search {
+  @apply inline-flex space-x-2  text-gray-800 lg:text-base md:text-base sm:text-sm border-b-4 border-red-600 sm:p-2;
+}
+
+.searchlabel {
+  @apply rounded-md mb-2 text-gray-200 bg-red-600 p-1 inline-flex;
+}
+
+.searchlogo {
+  @apply mt-1 mr-1;
 }
 
 .eachimage {
@@ -117,15 +117,15 @@
 /*______________________________________ showcase_____________________________________*/
 
 .showcase {
-  @apply bg-showcase-dog bg-no-repeat bg-cover bg-center flex relative font-sans-serif text-gray-200 justify-center flex-col text-3xl p-4 h-96 w-full items-center;
+  @apply bg-showcase-dog bg-no-repeat bg-cover bg-center flex relative font-sans-serif text-gray-200 justify-center flex-col text-3xl p-4 h-72 w-full items-center;
 }
 
 .showcaseoverlay {
-  @apply absolute inset-0 bg-gray-900 bg-opacity-70;
+  @apply absolute inset-0 bg-gray-900 bg-opacity-60 right-0 bottom-0 top-0 left-0;
 }
 
 .showcasetext {
-  @apply absolute text-center justify-center;
+  @apply absolute z-20  text-center  text-gray-50 font-bold text-4xl md:w-2/4 sm:w-10/12 top-0 right-0 bottom-0 left-0 mx-auto mt-20;
 }
 
 .message {

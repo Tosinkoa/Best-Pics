@@ -2,7 +2,7 @@ import Image from "next/image";
 import Layout from "components/Layout";
 import axios from "axios";
 import FileDownload from "js-file-download";
-import { TiArrowDownThick } from "react-icons/ti";
+import Loading from "components/Loading";
 
 const View = ({ pic }) => {
   const getPicture = async () => {
@@ -17,23 +17,28 @@ const View = ({ pic }) => {
 
   return (
     <Layout>
-      <div className="sm:-mt-5 lg:m-0">
-        <Image
-          src={pic.largeImageURL}
-          alt={pic.tags.split(",")[0]}
-          width={pic.imageWidth}
-          height={pic.imageHeight}
-        />
-      </div>
-
-      <div className="mt-3 justify-center text-center items-center  first-line: bg-red-600 rounded-md text-gray-200 p-4 mx-auto w-2/4">
-        <button className="inline-flex text-xl " onClick={getPicture}>
-          Download
-          <div className="bg-white inline-flex p-1 ml-2  rounded-full">
-            <TiArrowDownThick className=" text-gray-800 animate-bounce mt-1 text-center" />
+      {!pic ? (
+        <Loading />
+      ) : (
+        <div className="w-full">
+          <div className="sm:-mt-5 md:mt-8 w-full place-content-center mx-auto flex">
+            <Image
+              src={pic.largeImageURL}
+              alt={pic.tags.split(",")[0]}
+              width={600}
+              height={450}
+              objectFit="contain"
+              className="rounded-lg"
+            />
           </div>
-        </button>
-      </div>
+
+          <div className="mt-3 justify-center text-center items-center  first-line: bg-red-600 rounded-md text-gray-200 p-4 py-2 mx-auto w-fit font-semibold">
+            <button className="inline-flex text-xl " onClick={getPicture}>
+              Download
+            </button>
+          </div>
+        </div>
+      )}
     </Layout>
   );
 };
@@ -42,9 +47,7 @@ export default View;
 export const getServerSideProps = async ({ params }) => {
   const { id } = params;
 
-  const res = await fetch(
-    `https://pixabay.com/api/?key=${process.env.API_KEY}&id=${id}`
-  );
+  const res = await fetch(`https://pixabay.com/api/?key=${process.env.API_KEY}&id=${id}`);
 
   if (!res.ok) {
     return {

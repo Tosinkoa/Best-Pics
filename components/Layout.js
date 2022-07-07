@@ -2,13 +2,31 @@ import Head from "next/head";
 import Footer from "./Footer";
 import Header from "./Header";
 import Showcase from "./Showcase";
-import { useContext } from "react";
-import MyContext from "store/my-context";
+import { useEffect } from "react";
+
 import { useRouter } from "next/router";
+import { useState } from "react";
 
 export default function Layout({ description, keywords, title, children }) {
   const router = useRouter();
-  const { showMenu } = useContext(MyContext);
+  const [theSRC, setTheSRC] = useState("");
+  const [showShowcase, setShowShowcase] = useState("");
+
+  const { pathname } = router;
+
+  useEffect(() => {
+    if (pathname === "/") {
+      setTheSRC("showcase-vid.mp4");
+      setShowShowcase(theSRC && <Showcase src={theSRC} />);
+    } else if (pathname === "/videos") {
+      setTheSRC("action.mp4");
+      setShowShowcase(theSRC && <Showcase src={theSRC} />);
+    } else {
+      setTheSRC("");
+      setShowShowcase("");
+    }
+  }, [pathname, theSRC]);
+
   return (
     <div className="overflow-hidden">
       <Head>
@@ -16,11 +34,10 @@ export default function Layout({ description, keywords, title, children }) {
         <meta name="description" content={description} />
         <meta name="keywords" contents={keywords} />
       </Head>
-      {showMenu && <div className="backdrop"></div>}
 
       <Header />
+      {showShowcase}
 
-      {router.pathname === "/" && <Showcase />}
       <div>{children}</div>
       <Footer />
     </div>

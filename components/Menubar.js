@@ -1,16 +1,8 @@
-import { FaSignInAlt } from "react-icons/fa";
-import { SiGnuprivacyguard } from "react-icons/si";
 import { IoMdPhotos } from "react-icons/io";
-import { RiLogoutBoxRLine } from "react-icons/ri";
 import Link from "next/link";
-import { useContext } from "react";
-import MyContext from "store/my-context";
-import { FcAbout } from "react-icons/fc";
+import { RiMovieFill } from "react-icons/ri";
 
 export default function Menubar() {
-  const { showLogout, showSignup, showSignin, logoutHandler } =
-    useContext(MyContext);
-
   return (
     <div>
       <div className="headerlist">
@@ -20,32 +12,9 @@ export default function Menubar() {
               Photos <IoMdPhotos className="headericonlist" />
             </a>
           </Link>
-          {showSignin && (
-            <Link href="/login">
-              <a className="oneheaderlist">
-                SignIn <FaSignInAlt className="headericonlist" />
-              </a>
-            </Link>
-          )}
-
-          {showSignup && (
-            <Link href="/signup">
-              <a className="oneheaderlist">
-                SignUp <SiGnuprivacyguard className="headericonlist" />
-              </a>
-            </Link>
-          )}
-
-          {showLogout && (
-            <Link href="/">
-              <a className="oneheaderlist" onClick={logoutHandler}>
-                Logout <RiLogoutBoxRLine className="headericonlist" />
-              </a>
-            </Link>
-          )}
-          <Link href="/about">
-            <a>
-              <FcAbout className="abouticon" />
+          <Link href="/videos">
+            <a className="oneheaderlist">
+              Videos <RiMovieFill className="headericonlist" />
             </a>
           </Link>
         </div>
