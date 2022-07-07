@@ -8,34 +8,33 @@ const Videos = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [data, setData] = useState([]);
   const [value, setValue] = useState("");
-  // const [search, setSearch] = useState("");
+  const [search, setSearch] = useState("");
 
   const onChange = (e) => setValue(e.target.value);
 
-  const fetchData = async (value) => {
-    const API_KEY = process.env.API_KEY;
-    setIsLoading(true);
-    const res = await fetch(`https://pixabay.com/api/videos?key=${API_KEY}&q=${value}`);
-    if (!res.ok) return setIsLoading("Failed to load data");
-    const { hits } = await res.json();
-    setData(hits);
-    setIsLoading(false);
-  };
-
-  const onSubmit = async () => {
+  const onSubmit = async (e) => {
     e.preventDefault();
     setSearch(value);
     await fetchData(value);
   };
 
   useEffect(() => {
+    const fetchData = async (value) => {
+      const API_KEY = process.env.API_KEY;
+      setIsLoading(true);
+      const res = await fetch(`https://pixabay.com/api/videos?key=${API_KEY}&q=${search}`);
+      if (!res.ok) return setIsLoading("Failed to load data");
+      const { hits } = await res.json();
+      setData(hits);
+      setIsLoading(false);
+    };
     try {
-      fetchData();
+      fetchData(value);
     } catch (e) {
       console.log(e);
       setIsLoading("Failed to load data");
     }
-  }, [value]);
+  }, [search, value]);
 
   console.log(value);
 
