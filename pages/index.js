@@ -1,7 +1,7 @@
 import Layout from "../components/Layout";
 import { useState, useEffect } from "react";
 import MySearch from "components/MySearch";
-import Message from "components/message";
+import Message from "components/Message";
 import MyImages from "../components/MyImages";
 import Loading from "components/Loading";
 
