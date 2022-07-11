@@ -4,7 +4,7 @@
 
 /* _______________________________Header Styling______________________________ */
 .headerbackground {
-  @apply  w-full content-center lg:p-6 sm:p-8 sm:mx-auto;
+  @apply w-full content-center lg:p-6 sm:p-8 sm:mx-auto;
 }
 
 .header {
@@ -42,7 +42,7 @@
 
 /*____________________________________MyImage___________________________________*/
 .myimage {
-  @apply md:columns-3 lg:columns-4 sm:columns-1 m-8 mt-10 space-y-16 space-x-2 relative;
+  @apply md:grid-cols-3 grid lg:grid-cols-4 sm:grid-cols-1 m-8 mt-10 gap-y-8 gap-x-8 relative;
 }
 
 .search {
@@ -57,16 +57,13 @@
   @apply mt-1 mr-1;
 }
 
-.eachimage {
-  @apply relative justify-center;
-}
 
 .imagetitle {
-  @apply text-xl absolute capitalize font-bold;
+  @apply text-sm capitalize font-bold;
 }
 
 .pagetitle {
-  @apply flex font-sans-serif text-center m-10 mb-2 text-3xl justify-center;
+  @apply flex font-sans-serif text-center m-10 mb-2 mt-20 text-3xl justify-center;
 }
 
 /*_______________________________________Card________________________________________*/

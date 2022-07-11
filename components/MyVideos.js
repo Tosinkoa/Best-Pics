@@ -1,11 +1,18 @@
-const MyVideos = ({ src }) => {
+import Image from "next/image";
+
+const MyVideos = ({ src, title }) => {
   return (
-    <div className="w-full mt-6 flex md:px-10 lg:px-16 sm:px-4">
-      <div className="grid sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-4 mx-auto justify-center place-content-center gap-4 ">
-        <div className="p-4 shadow-xl w-fit rounded-md flex">
-          <iframe src={src}></iframe>
-        </div>
-      </div>
+    <div className="w-full mt-6 flex flex-col ">
+      {/* <div className="p-4 shadow-xl w-fit rounded-md flex">
+          <iframe src={`${src}?autoplay=0`}></iframe>
+        </div> */}
+      {/* <Image src={src ? src : "/images/paulImage"} alt="video" height={100} width={100} /> */}
+      {/* <p>{`${src}?autoplay=0`}</p> */}
+      <video autoPlay={false} width={400} height={300} controls className="rounded-md">
+        <source src={src} />
+      </video>
+                <p className=" w-full font-bold border border-gray-500 mt-1  bg-red-500 text-gray-50  text-center py-1 cursor-pointer text-lg shadow-md">{title}</p>
+    
     </div>
   );
 };

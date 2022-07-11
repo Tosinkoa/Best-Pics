@@ -4,6 +4,7 @@ import MySearch from "components/MySearch";
 import Message from "components/Message";
 import MyImages from "../components/MyImages";
 import Loading from "components/Loading";
+import Parallax from "components/Parallax";
 
 function Home() {
   const [data, setdata] = useState([]);
@@ -21,8 +22,8 @@ function Home() {
       if (!res.ok) return setIsLoading("Failed to load data");
 
       const { hits } = await res.json();
-      setIsLoading(false);
       setdata(hits);
+      setIsLoading(false);
     };
     try {
       fetchData();
@@ -34,8 +35,10 @@ function Home() {
   return (
     <Layout>
       <div className="w-full">
-        <Message />
-        <MySearch onSubmit={searchSubmit} onChange={searchHandler} value={search} />
+        <Parallax>
+          <Message />
+          <MySearch onSubmit={searchSubmit} onChange={searchHandler} value={search} />
+        </Parallax>
         {isLoading ? (
           <Loading />
         ) : (
@@ -51,11 +54,14 @@ function Home() {
                     width={mydata.webformatWidth}
                     height={mydata.webformatHeight}
                   />
-                  <p className="imagetitle">{mydata.tags.split(",")[0]}</p>
                 </div>
               </div>
             ))}
-            {!isLoading && data.length === 0 && <h1 className="message">Picture not found</h1>}
+          </div>
+        )}
+        {!isLoading && data.length === 0 && (
+          <div className="w-full flex">
+            <h1 className="font-extrabold flex text-2xl  m-2  mx-auto text-red-600 ">Picture not found!</h1>
           </div>
         )}
       </div>

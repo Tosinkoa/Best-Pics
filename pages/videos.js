@@ -36,20 +36,21 @@ const Videos = () => {
     }
   }, [search, value]);
 
-  console.log(value);
-
   return (
     <Layout>
       <div>
         <MySearch onSubmit={onSubmit} onChange={onChange} value={value} />
 
         {isLoading && <Loading />}
-        {!isLoading &&
-          data?.map((mydata) => (
-            <div key={mydata.id}>
-              <MyVideos src={mydata.videos.medium.url} />
-            </div>
-          ))}
+        <div className="md:grid-cols-3 grid lg:grid-cols-4 sm:grid-cols-1 m-8 mt-10 gap-y-8 gap-x-8 relative">
+          {!isLoading &&
+            data?.map((mydata) => (
+              <div key={mydata.id} className='mx-auto'>
+                <MyVideos src={mydata.videos.medium.url} title={mydata.tags.split(",")[0]} />
+                {/* <MyVideos src={mydata.userImageURL} /> */}
+              </div>
+            ))}
+        </div>
       </div>
     </Layout>
   );
