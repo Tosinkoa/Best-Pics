@@ -1,1 +1,1 @@
-//I hope you love the app, and thanks for checking on my app
+## Thanks for checking this out
