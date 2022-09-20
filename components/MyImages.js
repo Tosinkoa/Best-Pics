@@ -5,7 +5,7 @@ import Parallax from "./Parallax";
 export default function MyImages({ id, src, alt, width, height }) {
   return (
     <Parallax>
-      <div className="border-2 rounded-lg focus:scale-110 hover:scale-110 sm:hover:scale-100 sm:focus:hover:scale-110 transition-all duration-150 shadow-md p-2">
+      <div className="border-2 rounded-lg focus:scale-110 hover:scale-110 sm:hover:scale-100 sm:focus:hover:scale-100 transition-all duration-150 shadow-md p-2">
         <div className="relative justify-center mx-auto">
           <div className="m-3 ">
             <Image className="rounded-md " src={src} alt={alt} width={width} height={height} />
