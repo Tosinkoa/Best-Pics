@@ -16,9 +16,9 @@ export default function Header() {
         <Popover>
           <Popover.Button>
             <div className="headermenuicon">
-              <button>
+              <div  >
                 <FaBars />
-              </button>
+              </div>
             </div>
           </Popover.Button>
           <Popover.Panel>

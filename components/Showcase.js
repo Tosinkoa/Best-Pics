@@ -4,7 +4,7 @@ export default function HomeShowcase({ src, showcaseText }) {
       <div className="showcaseoverlay"></div>
       <div className="flex font-sans-serif">
         {showcaseText}
-        <video autoPlay loop muted playsInline className="w-full sm:h-80 md:h-[500px] object-cover">
+        <video autoPlay loop muted disablePictureInPicture controlsList="nodownload" className="w-full sm:h-80 md:h-[500px] object-cover">
           <source src={`/videos/${src}`} type="video/mp4" />
         </video>
       </div>
