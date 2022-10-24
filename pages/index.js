@@ -51,8 +51,6 @@ function Home() {
                     id={mydata.id}
                     src={mydata.webformatURL}
                     alt={mydata.tags.split(",")[0]}
-                    width={mydata.webformatWidth}
-                    height={mydata.webformatHeight}
                   />
                 </div>
               </div>
