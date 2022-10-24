@@ -57,7 +57,6 @@
   @apply mt-1 mr-1;
 }
 
-
 .imagetitle {
   @apply text-sm capitalize font-bold;
 }
@@ -96,11 +95,11 @@
 /*____________________________________Dropdown__________________________________________*/
 
 .ddheaderlist {
-  @apply justify-start p-2 font-bold lg:hidden bg-cover relative rounded-md bg-red-600;
+  @apply justify-start p-2 font-bold z-30 lg:hidden bg-cover absolute rounded-md  w-8/12 h-10 mt-12 ml-auto top-0 right-0 bottom-0 left-0;
 }
 
 .ddmenulist {
-  @apply grid-cols-5 grid-rows-1 pt-5 justify-start z-10  w-full bg-red-600 text-4xl left-0 p-8 text-left;
+  @apply grid-cols-5 grid-rows-1 pt-5 justify-start z-10  w-full rounded-md bg-red-600 text-4xl left-0 p-8 text-left;
 }
 
 .ddicon {
